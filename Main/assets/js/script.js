@@ -1,6 +1,13 @@
-var header = document.querySelector(".header");
-var startbutton = document.querySelector(".startbutton");
-var stopbutton = document.querySelectorAll("stopbutton")
+var startGame = document.querySelector("#startGame");
+var reset = document.querySelector("#reset");
+var timer = document.querySelector("#timer");
+var counter = document.querySelector("#counter");
+var questionArea = document.querySelector(".questionArea")
+var answerArea = document.querySelector(".answerArea")
+
+
+var timer = 0;
+var timerleft = 80;
 
 var QuizQuestions = [
   {
