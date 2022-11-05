@@ -1,75 +1,25 @@
 var startGame = document.querySelector("#startGame");
 var reset = document.querySelector("#reset");
-var timer = document.querySelector("#timer");
-var counter = document.querySelector("#counter");
-var questionArea = document.querySelector(".questionArea");
-var answerArea = document.querySelector(".answerArea");
+var time_sec = document.querySelector(".time_sec")
+var QuizQuestions = document.querySelector(".Quizquestions");
+
 var Score = document.querySelector("#Score")
 var resetButton = document.querySelector("#resetButton")
 var startButton = document.querySelector("#startbutton")
 
-var timer = 0;
-var timerleft = 80;
+
+var startTimer = null;
+var timer;
 var timerCount;
 var Userchoice;
 var interval;
 var ans;
+var correctanswer = 0;
+var wronganswer = 0
 
 var QuizQuestions = [
-  {
-    numb: 1,
-  question: "Where in the index.html should you put your script.js tag?",
-  ans: "At the bottom of the code before the closing </body> tag ", 
-  options: [
-     "At the bottom of the code before the closing </body> tag ", 
-    "It does not matter you can put it anywhere",
-    "At the top of your code",
-    "In your </header> tag"
-],
-    numb: 2,
-  question: "Where in the index.html should you put your style.css tag?",
-  ans: "At the top of your code before the </head> tag",
-  options: [
-    "It does not matter you can put it anywhere",
-    "In your </header> tag",
-    "At the top of your code before the </head> tag",
-    "At the bottom of the code"  
-  ]
-  },
-  {
-    numb: 3,
-  question: "What does the Media querie function do?",
-  ans: "It helps adjust the page to different screen sizes",
-  options: [
-    "It helps adjust the page to different screen sizes",
-    "It helps show what is hiden in on a page",
-    "It doesn't do anything",
-    "It is used call a for loop"
-  ]
-  },
-  {
-    numb: 4,
-  question: "In style.css how do you target an ID element?",
-  ans: "With the # symbol",
-  options: [
-    "With the # symbol",
-    "With the @ symbol",
-    "With the ! symbol",
-    "With the & symbol"
-  ]
-  },
-  {
-    numb: 5,
-  question: "In style.css how do you target an class element?",
-  ans: "With the . symbol",
-  options: [
-    "With the & symbol",
-    "With the ^ symbol",
-    "With the $ symbol",
-    "With the % symbol",
-  ]
-  },
-  ]
+
+]
   
   var ans = [
     "At the bottom of the code before the closing </body> tag ", 
@@ -79,34 +29,55 @@ var QuizQuestions = [
     "With the . symbol",
   ];
   
-
-  function startTimer(){
-//the start button will start this prompt 
-  };
-
-
-function reset(){
- // Resets timer, game and go back to the 1t question.
- timer = 0;
- timerleft = 0;
- startGame = QuizQuestions;
- // Renders win and loss counts and sets them into client storage
-
+function startGame(){
+  //show 1st question and start timer
+  QuizQuestions
+  startButton.disabled=true;
+  startTimer();
 }
 
-function gameover(){
 
-}
 
-function nextQuestion(){
-  for (let i = 0; i < QuizQuestions.length; i++) {
-    text += QuizQuestions[i] + "";
-
-    // if userchoice !== ans then send score to wrong answer if right then send to correct answer
+ function startTimer(){
+  timer = setInterval(function(){
+    timerCount--;
+    time_sec.textContent = timerCount;
+    if (timerCount >=0)
   }
 }
+//the start button will start this prompt 
 
 
+
+
+//function reset(){
+ // Resets timer, game and go back to the 1t question.
+ //timer = 0;
+ //timerleft = 0;
+// startGame = QuizQuestions;
+//clearinterval()
+//}
+
+//function gameover(){
+//show result and reset button
+//}
+
+//function nextQuestion(){
+//  for (let i = 1; i < QuizQuestions.length; i++) {
+  //  text += QuizQuestions[i] + "";
+
+    // if userchoice !== ans then send score to wrong answer if right then send to correct answer
+ // }
+//}
+
+//function score(){
+//if (Userchoice == ans){
+  //correctanswer++;
+//} else {
+//wronganswer++;
+//}
+//}
 // Attaches event listener to button
-resetButton.addEventListener("click", reset);
+
 startButton.addEventListener("click", startGame);
+
