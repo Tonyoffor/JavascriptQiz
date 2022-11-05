@@ -1,25 +1,29 @@
 var startGame = document.querySelector("#startGame");
 var reset = document.querySelector("#reset");
-var time_sec = document.querySelector(".time_sec")
+var time_sec = document.getElementById("time_sec");
 var QuizQuestions = document.querySelector(".Quizquestions");
 
-var Score = document.querySelector("#Score")
-var resetButton = document.querySelector("#resetButton")
-var startButton = document.querySelector("#startbutton")
+var Score = document.querySelector("#Score");
+var resetButton = document.querySelector("#resetButton");
+var startButton = document.querySelector("#startbutton");
 
 
-var startTimer = null;
+
+
+var scorecounter =0;
 var timer;
 var timerCount;
 var Userchoice;
 var interval;
 var ans;
 var correctanswer = 0;
-var wronganswer = 0
+var wronganswer = 0;
+
+
 
 var QuizQuestions = [
 
-]
+];
   
   var ans = [
     "At the bottom of the code before the closing </body> tag ", 
@@ -29,11 +33,13 @@ var QuizQuestions = [
     "With the . symbol",
   ];
   
-function startGame(){
+function gameStart(){
   //show 1st question and start timer
-  QuizQuestions
-  startButton.disabled=true;
+  timerCount = 80;
+  console.log("inside start game");
+  document.getElementById("Q1").style.display="block";
   startTimer();
+  
 }
 
 
@@ -41,15 +47,32 @@ function startGame(){
  function startTimer(){
   timer = setInterval(function(){
     timerCount--;
-    time_sec.textContent = timerCount;
-    if (timerCount >=0)
+    time_sec.innerHTML = timerCount;
+    if (timerCount ==0){
+      clearInterval(timer);
+     }
+  },1000);
+  console.log("inside start timer");
+  console.log("timerCount="+timerCount);
   }
+
+function increasescore(index){
+scorecounter= scorecounter+1;
+Score.innerHTML="Score: "+scorecounter;
+nextQuestion(index);
 }
-//the start button will start this prompt 
 
+function decreasetime(){
+  timerCount=timerCount-2;
+}
 
-
-
+function nextQuestion(index){
+if (index<4){
+  document.getElementsByClassName("questions")[index+1].style.display="block";
+}
+  
+  
+}
 //function reset(){
  // Resets timer, game and go back to the 1t question.
  //timer = 0;

@@ -12,36 +12,32 @@
       <!-- = are startgame and startbutton doing the same thing? -->
   <section id="start">
     <div id = "startGame"> Start Game  </div>
-      <button id = "startbutton">Start</button>
+      <button id = "startbutton" onclick="gameStart()">Start</button>
     </div>
   </section>
     <div id="timer" > 
       <h3 >Time Left: </h3>
-      <div class="time_sec">80</div>
     </div>
-
-    <div id = "reset">Reset Game:
-      <button id="resetButton"> Reset</button>
-    </div>
+    <div id="time_sec">80</div>
    
 		<section class="Quizquestions">Quiz questions
-      <div id="Q1"> 1. Where in the index.html should you put your script.js tag?
-        <ul class="Q1">
-          <li>At the bottom of the code before the closing /body tag</li>
-          <li>It does not matter you can put it anywhere</li>
+      <div id="Q1" class="questions"> 1. Where in the index.html should you put your script.js tag?
+        <ul class="Q1" >
+          <li onclick="increasescore(0)" >At the bottom of the code before the closing /body tag</li>
+          <li onclick="decreasetime()">It does not matter you can put it anywhere</li>
           <li>At the top of your code</li>
           <li>In your /header> tag</li>
         </ul>
       </div>
-      <div id="Q2"> 2. Where in the index.html should you put your style.css tag?
+      <div id="Q2" class="questions"> 2. Where in the index.html should you put your style.css tag?
         <ul class="Q2">
           <li> It does not matter you can put it anywhere </li>
-          <li> In your /header> tag </li>
+          <li onclick="increasescore(1)" > In your /header> tag </li>
           <li> At the top of your code before the /head> tag</li>
           <li>  At the bottom of the code </li>
         </ul>
       </div>
-      <div id="Q3"> 3. What does the Media querie function do?
+      <div id="Q3" onclick="increasescore(2)" class="questions"> 3. What does the Media querie function do?
         <ul class="Q3">
           <li> It helps adjust the page to different screen sizes   </li>
           <li>  It helps show what is hiden in on a page   </li>
@@ -49,7 +45,7 @@
           <li>   It is used call a for loop </li>
         </ul>
       </div>
-      <div id="Q4"> 4. In style.css how do you target an ID element?
+      <div id="Q4" onclick="increasescore(3)" class="questions"> 4. In style.css how do you target an ID element?
         <ul class="Q4">
           <li> With the # symbol   </li>
           <li>  With the @ symbol   </li>
@@ -57,7 +53,7 @@
           <li>   With the & symbol </li>
         </ul>
       </div>
-      <div id="Q5"> 5. In style.css how do you target a class element?
+      <div id="Q5" onclick="increasescore(4)" class="questions"> 5. In style.css how do you target a class element?
         <ul class="Q5">
           <li> With the . symbol   </li>
           <li>  With the @ symbol   </li>
@@ -67,8 +63,13 @@
       </div>
     </section>
 	<div id="Score"> Your Score: </div>
-  <div id="initials"> Enter Initals: </div>
+  <div id="initials"> Enter Initals: <input type="text" id="Initals" ><br><br></div>
     
+
+  <div id = "reset">Reset Game:
+    <button id="resetButton"> Reset</button>
+  </div>
+
   </div>
     <script src="assets/js/script.js"></script>
   </body>

@@ -32,45 +32,83 @@
   text-align: center;
   cursor: pointer;
 }
+
+#reset{
+  background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
+  border-radius: 4px;
+  color: #13293d;
+  cursor: pointer;
+  font-size: 2em;
+  letter-spacing: 0.21px;
+  line-height: 14px;
+  max-width: 200px;
+  padding: 9px 15px;
+  text-align: center;
+  align-items: center;
+  transition-duration: 0.15s;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  margin-top: 0.6em;
+}
+
+#resetButton{
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
 #Q1{
   background: rgb(103, 206, 253);
   width: 550px;
   border-radius: 5px;
-}
-.Q1{
   display: none;
 }
+.Q1{
+background-color: antiquewhite;}
 
 #Q2{
   background: rgb(103, 206, 253);
   width: 550px;
   border-radius: 5px;
+  display: none;
 }
 .Q2{
-  display: none;
+  background-color: antiquewhite;
 }
 #Q3{
   background: rgb(103, 206, 253);
   width: 550px;
   border-radius: 5px; 
+  display: none;
 }
 .Q3{
-  display: none;
+  background-color: antiquewhite;
 }
 #Q4{
   background: rgb(103, 206, 253);
   width: 550px;
   border-radius: 5px;
+  display: none;
 }
 .Q4{
-  display: none;
+  background-color: antiquewhite;
 }
 #Q5{
   background: rgb(103, 206, 253);
   width: 550px;
   border-radius: 5px;
+  display: none;
 }
 .Q5{
-  display: none;
+  background-color: antiquewhite;
 }
 
