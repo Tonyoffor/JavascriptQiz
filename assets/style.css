@@ -1,7 +1,8 @@
+/* =This affects the whole body of the page */
 body{
   background-color: #ec6e27;
 }
-
+/* This section styles the start section */
 #start{
   background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
   border-radius: 4px;
@@ -20,6 +21,7 @@ body{
   margin-top: 0.6em;
 }
 
+/* This section styles the start button eleement */
 #startbutton{
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -51,23 +53,7 @@ body{
   
 }
 
-#reset{
-  background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
-  border-radius: 4px;
-  color: #13293d;
-  cursor: pointer;
-  font-size: 2em;
-  letter-spacing: 0.21px;
-  line-height: 14px;
-  max-width: 200px;
-  padding: 10px 32px;
-  text-align: center;
-  align-items: center;
-  transition-duration: 0.15s;
-  transition-property: background-color;
-  transition-timing-function: linear;
-  margin-top: 0.6em;
-}
+/* Below are the styles for the questions section; I used the display none to hide them at the bigginning of the game. */
 
 #Q1{
   background: rgb(103, 206, 253);
@@ -117,15 +103,16 @@ background-color: antiquewhite;}
 
 #Gameover{
   display: none;
+  font-size: 2em;
 }
 
 .Quizquestions{
- 
   font-size: 2em;
 }
 
 #Score{
   display: none;
+  font-size: 1em;
 }
 
 #initials{

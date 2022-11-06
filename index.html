@@ -9,17 +9,19 @@
   <body>
     <div>
 
-      <!-- = are startgame and startbutton doing the same thing? -->
+      <!-- = This section contains the start button and the start game text -->
   <section id="start">
     <div id = "startGame"> Start Game  </div>
       <button id = "startbutton" onclick="gameStart()">Start</button>
     </div>
   </section>
+  <!-- The section below has the timer content  -->
     <div id="timer" > 
       <h3 >Time Left: </h3>
     </div>
     <div id="time_sec">50</div>
    
+    <!-- This section contains the Quiz questions and it is from here that I decided to put the functions that add or remove varibales -->
 		<section class="Quizquestions">
       <h3>Quiz questions</h3>
       <div id="Q1" class="questions"> 1. Where in the index.html should you put your script.js tag?
@@ -63,7 +65,8 @@
         </ul>
       </div>
     </section>
-    <div id="Gameover"></div>
+    <!-- This last section is the area where you will find the players score based on how many questions they got right, a place where the player can add their names after playing -->
+    <div id="Gameover"></div> <br>
 	<div id="Score"> <h2>Your Score: </h2></div>
   <div id="initials"> <h2>Enter Initals: </h2><input type="text" id="Initals" ><br><br></div>
 
