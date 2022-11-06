@@ -20,8 +20,7 @@ var ans;
 
 
 function gameStart(){
-  //show 1st question and start timer
-  timerCount = 50;
+  timerCount = 20;
   console.log("inside start game");
   document.getElementById("Q1").style.display="block";
   startTimer();
@@ -35,11 +34,13 @@ function gameStart(){
     timerCount--;
     time_sec.innerHTML = timerCount;
     if (timerCount ==0){
+      Gameover();
       clearInterval(timer);
      }
   },1000);
   console.log("inside start timer");
   console.log("timerCount="+timerCount);
+  
   }
 
 function increasescore(index){
@@ -50,7 +51,7 @@ nextQuestion(index);
 }
 
 function decreasetime(){
-  timerCount=timerCount-2;
+  timerCount=timerCount-5;
 }
 
 function nextQuestion(index){
@@ -60,22 +61,12 @@ if (index<4){
 }
 
 
-function Gameover{
-  if (timerCount == 0 || ){
-Gameover.innerHTML ="Game Over"
-  }
+function Gameover(){
+  document.getElementById("Gameover").style.display="block";
+document.getElementById("Gameover").innerHTML ="GameOver";
+document.getElementById("initials").style.display="block";
+document.getElementById("Score").style.display="block";
 }
-//function reset(){
- // Resets timer, game and go back to the 1t question.
- //timer = 0;
- //timerleft = 0;
-// startGame = QuizQuestions;
-//clearinterval()
-//}
-
-//function gameover(){
-//show result and reset button
-//}
 
 startButton.addEventListener("click", startGame);
 

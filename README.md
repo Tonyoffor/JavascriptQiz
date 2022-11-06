@@ -1,4 +1,16 @@
 # JavascriptQiz
+In this challenge I was meant to create a JavaScript Quiz game where the questions where hiden at the beginning of the game.
+
+As you start the game a timer start and then the first question of five shows up. 
+
+If you get the 
+
+
+![FinalProduct](/Main/assets/img/FinalProduct.png)
+
+Github Repo:
+Deployed Link:
+
 
 GIVEN I am taking a code quiz
 
