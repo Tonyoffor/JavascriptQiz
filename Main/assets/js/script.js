@@ -16,26 +16,12 @@ var timerCount;
 var Userchoice;
 var interval;
 var ans;
-var correctanswer = 0;
-var wronganswer = 0;
 
 
 
-var QuizQuestions = [
-
-];
-  
-  var ans = [
-    "At the bottom of the code before the closing </body> tag ", 
-    "At the top of your code before the </head> tag",
-    "It helps adjust the page to different screen sizes",
-    "With the # symbol",
-    "With the . symbol",
-  ];
-  
 function gameStart(){
   //show 1st question and start timer
-  timerCount = 80;
+  timerCount = 50;
   console.log("inside start game");
   document.getElementById("Q1").style.display="block";
   startTimer();
@@ -58,6 +44,7 @@ function gameStart(){
 
 function increasescore(index){
 scorecounter= scorecounter+1;
+max ="10";
 Score.innerHTML="Score: "+scorecounter;
 nextQuestion(index);
 }
@@ -70,8 +57,13 @@ function nextQuestion(index){
 if (index<4){
   document.getElementsByClassName("questions")[index+1].style.display="block";
 }
-  
-  
+}
+
+
+function Gameover{
+  if (timerCount == 0 || ){
+Gameover.innerHTML ="Game Over"
+  }
 }
 //function reset(){
  // Resets timer, game and go back to the 1t question.
@@ -84,23 +76,6 @@ if (index<4){
 //function gameover(){
 //show result and reset button
 //}
-
-//function nextQuestion(){
-//  for (let i = 1; i < QuizQuestions.length; i++) {
-  //  text += QuizQuestions[i] + "";
-
-    // if userchoice !== ans then send score to wrong answer if right then send to correct answer
- // }
-//}
-
-//function score(){
-//if (Userchoice == ans){
-  //correctanswer++;
-//} else {
-//wronganswer++;
-//}
-//}
-// Attaches event listener to button
 
 startButton.addEventListener("click", startGame);
 
