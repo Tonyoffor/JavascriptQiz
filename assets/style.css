@@ -53,7 +53,7 @@ body{
   
 }
 
-/* Below are the styles for the questions section; I used the display none to hide them at the bigginning of the game. */
+/* Below are the styles for the questions section; I used the display: none; to hide them at the bigginning of the game. */
 
 #Q1{
   background: rgb(103, 206, 253);

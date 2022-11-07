@@ -3,7 +3,7 @@ var startGame = document.querySelector("#startGame");
 var reset = document.querySelector("#reset");
 var time_sec = document.getElementById("time_sec");
 var QuizQuestions = document.querySelector(".Quizquestions");
-var Initials=document.querySelector("Initials");
+var Initials=document.querySelector("initials");
 var Score = document.querySelector("#Score");
 var startButton = document.querySelector("#startbutton");
 
@@ -61,17 +61,18 @@ if (index<4){
   document.getElementsByClassName("questions")[index+1].style.display="block";
 }
 }
-
-function show_initials(){
-  if(Initials=document.querySelector("Initials").value){
-    sessionStorage.Initials.value
+//with this function when the user submits their info it is saved on their screen until it is refreshed; if I wanted it to never leave then I would have used localstorage
+function final() {
+  alert("Your initials have been saved");
+  if(initials=document.querySelector("initials").value){
+    sessionStorage.initials.value
   }
 }
 
 //This function displays all the hidden values
 function Gameover(){
   document.getElementById("Gameover").style.display="block";
-document.getElementById("Gameover").innerHTML ="GameOver";
+document.getElementById("Gameover").innerHTML ="Game Over";
 document.getElementById("initials").style.display="block";
 document.getElementById("Score").style.display="block";
 }

@@ -68,7 +68,14 @@
     <!-- This last section is the area where you will find the players score based on how many questions they got right, a place where the player can add their names after playing -->
     <div id="Gameover"></div> <br>
 	<div id="Score"> <h2>Your Score: </h2></div>
-  <div id="initials"> <h2>Enter Initals: </h2><input type="text" id="Initals" ><br><br></div>
+
+
+  <form id="initials" action="/action_page.php" onsubmit="final()">
+    Enter Initials: <input type="text" name="Initals">
+    <input type="submit" value="Submit">
+  </form>
+
+
 
   </div>
     <script src="assets/script.js"></script>
