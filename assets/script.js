@@ -31,7 +31,6 @@ function gameStart(){
     time_sec.innerHTML = timerCount;
     if (timerCount ==0){
       Gameover();
-      clearInterval(timer);
      }
   },1000);
   console.log("timerCount="+timerCount);
@@ -54,6 +53,9 @@ function nextQuestion(index){
 if (index<4){
   document.getElementsByClassName("questions")[index+1].style.display="block";
 }
+else if(index>=4){
+  Gameover();
+}
 }
 //with this function when the user submits their info it is saved on their screen until it is refreshed; if I wanted it to never leave then I would have used localstorage
 function final() {
@@ -65,6 +67,7 @@ function final() {
 
 //This function displays all the hidden values
 function Gameover(){
+  clearInterval(timer);
   document.getElementById("Gameover").style.display="block";
 document.getElementById("Gameover").innerHTML ="Game Over";
 document.getElementById("initials").style.display="block";
