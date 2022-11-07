@@ -8,8 +8,6 @@ var Score = document.querySelector("#Score");
 var startButton = document.querySelector("#startbutton");
 
 
-
-
 var scorecounter =0;
 var timer;
 var timerCount;
@@ -20,11 +18,9 @@ var ans;
 
 //This is the first main function that is meant to start the game
 function gameStart(){
-  timerCount = 20;
-  console.log("inside start game");
+  timerCount = 40;
   document.getElementById("Q1").style.display="block";
   startTimer();
-  
 }
 
 
@@ -38,9 +34,7 @@ function gameStart(){
       clearInterval(timer);
      }
   },1000);
-  console.log("inside start timer");
   console.log("timerCount="+timerCount);
-  
   }
 
   //this function is responsible for increasing the users score when they get a question right
