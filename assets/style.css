@@ -103,7 +103,7 @@ background-color: antiquewhite;}
 
 #Gameover{
   display: none;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .Quizquestions{
@@ -112,9 +112,13 @@ background-color: antiquewhite;}
 
 #Score{
   display: none;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 #initials{
   display: none;
+}
+
+form{
+  font-size: 2em
 }

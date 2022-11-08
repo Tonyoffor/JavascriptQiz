@@ -18,7 +18,7 @@ var ans;
 
 //This is the first main function that is meant to start the game
 function gameStart(){
-  timerCount = 40;
+  timerCount = 45;
   document.getElementById("Q1").style.display="block";
   startTimer();
 }
@@ -36,7 +36,7 @@ function gameStart(){
   console.log("timerCount="+timerCount);
   }
 
-  //this function is responsible for increasing the users score when they get a question right
+//this function is responsible for increasing the users score when they get a question right
 function increasescore(index){
 scorecounter= scorecounter+1;
 Score.innerHTML="Score: "+scorecounter;
@@ -59,13 +59,13 @@ else if(index>=4){
 }
 //with this function when the user submits their info it is saved on their screen until it is refreshed; if I wanted it to never leave then I would have used localstorage
 function final() {
-  alert("Your initials have been saved");
   if(initials=document.querySelector("initials").value){
     sessionStorage.initials.value
-  }
+  };
+  alert("Your initials have been saved");
 }
 
-//This function displays all the hidden values
+//This function displays all the hidden values and stops the timer
 function Gameover(){
   clearInterval(timer);
   document.getElementById("Gameover").style.display="block";
@@ -76,4 +76,3 @@ document.getElementById("Score").style.display="block";
 
 //This is an event listener that calls the first function "start game"
 startButton.addEventListener("click", startGame);
-
